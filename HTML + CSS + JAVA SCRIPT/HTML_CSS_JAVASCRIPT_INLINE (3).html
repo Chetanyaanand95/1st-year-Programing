@@ -1,0 +1,30 @@
+<html>
+
+<head>
+          <style>
+                    img {
+                              width: 200px;
+                              margin: 10px;
+                              transition: 0.5s;
+                    }
+
+                    img:hover {
+                              transform: scale(1.3);
+                    }
+          </style>
+          <script>
+                    function showTitle(t) {
+                              document.getElementById("title").innerHTML = t;
+                    } 
+          </script>
+</head>
+
+<body>
+          <h2 id="title">Image Gallery</h2>
+          <img src="https://picsum.photos/seed/mtn/400/300" onmouseover="showTitle('Mountain')">
+          <img src="https://picsum.photos/seed/snw/400/300" onmouseover="showTitle('Beach')">
+          <img src="https://picsum.photos/seed/fst/400/300" onmouseover="showTitle('Forest')">
+          <img src="https://picsum.photos/seed/dsr/400/300" onmouseover="showTitle('City Light')">
+</body>
+
+</html>

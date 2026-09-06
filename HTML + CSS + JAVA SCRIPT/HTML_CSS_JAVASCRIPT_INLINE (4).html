@@ -1,0 +1,44 @@
+<html>
+
+<head>
+          <style>
+                    body {
+                              text-align: center;
+                    }
+
+                    input {
+                              padding: 10px;
+                              margin: 5px;
+                    }
+
+                    button {
+                              padding: 10px;
+                    }
+          </style>
+          <script>
+                    function calculate(op) {
+                              let a = parseFloat(document.getElementById("a").value);
+                              let b = parseFloat(document.getElementById("b").value);
+                              let result;
+                              if (op == "+") result = a + b;
+                              if (op == "-") result = a - b;
+                              if (op == "*") result = a * b;
+                              if (op == "/") result = a / b;
+                              document.getElementById("res").innerHTML = "Result: " + result;
+                    } 
+          </script>
+</head>
+
+<body>
+          <h2>Calculator</h2>
+          <input id="a">
+          <input id="b">
+          <br>
+          <button onclick="calculate('+')">+</button>
+          <button onclick="calculate('-')">-</button>
+          <button onclick="calculate('*')">*</button>
+          <button onclick="calculate('/')">/</button>
+          <h3 id="res"></h3>
+</body>
+
+</html>

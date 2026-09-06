@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+img {
+    width: 400px;
+    height: 250px;
+    display: block;
+    margin: auto;
+}
+
+h2, p {
+    text-align: center;
+}
+</style>
+
+<script>
+let images = [
+    { src: "https://picsum.photos/seed/s1/800/400", title: "Beautiful Mountains" },
+    { src: "https://picsum.photos/seed/s2/800/400", title: "Ocean Sunset" },
+    { src: "https://picsum.photos/seed/s3/800/400", title: "Lush Green Forest" },
+    { src: "https://picsum.photos/seed/s4/800/400", title: "City at Night" },
+    { src: "https://picsum.photos/seed/s5/800/400", title: "Desert Dunes" }
+];
+
+let i = 0;
+
+function slide() {
+    document.getElementById("slide").src = images[i].src;
+    document.getElementById("title").innerHTML = images[i].title;
+
+    i++;
+    if (i == images.length) i = 0;
+
+    setTimeout(slide, 2000);
+}
+</script>
+
+</head>
+
+<body onload="slide()">
+
+<h2>Image Slideshow</h2>
+
+<img id="slide">
+<p id="title"></p>
+
+</body>
+
+</html>

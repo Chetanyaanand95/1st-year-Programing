@@ -1,0 +1,44 @@
+<html>
+
+<head>
+          <style>
+                    body {
+                              font-family: Arial;
+                    }
+
+                    .menu {
+                              display: none;
+                    }
+
+                    a {
+                              display: block;
+                              padding: 10px;
+                              background: #333;
+                              color: white;
+                              text-decoration: none;
+                    }
+
+                    button {
+                              padding: 10px;
+                    }
+          </style>
+          <script>
+                    function toggleMenu() {
+                              let m = document.getElementById("menu");
+                              if (m.style.display == "block")
+                                        m.style.display = "none";
+                              else
+                                        m.style.display = "block";
+                    } 
+          </script>
+</head>
+
+<body>
+          <button onclick="toggleMenu()">Menu</button>
+          <div id="menu" class="menu">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+          </div>
+</body>

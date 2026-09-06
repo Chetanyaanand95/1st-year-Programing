@@ -1,0 +1,70 @@
+<html>
+
+<head>
+          <title>Student Registration</title>
+          <style>
+                    body {
+                              font-family: Arial;
+                              background: #f2f2f2;
+                    }
+
+                    .container {
+                              width: 350px;
+                              margin: auto;
+                              padding: 20px;
+                              background: white;
+                              border-radius: 10px;
+                    }
+
+                    input {
+                              width: 100%;
+                              padding: 8px;
+                              margin: 5px 0;
+                    }
+
+                    button {
+                              background: green;
+                              color: white;
+                              padding: 10px;
+                              border: none;
+                              width: 100%;
+                    }
+          </style>
+          <script>
+                    function validateForm() {
+                              let name = document.forms["form"]["name"].value;
+                              let email = document.forms["form"]["email"].value;
+                              let phone = document.forms["form"]["phone"].value;
+                              if (name == "") {
+                                        alert("Name required");
+                                        return false;
+                              }
+                              if (!email.includes("@")) {
+                                        alert("Invalid Email");
+                                        return false;
+                              }
+                              if (phone.length != 10) {
+                                        alert("Phone must be 10 digits");
+                                        return false;
+                              }
+                              alert("Registration Successful");
+                    } 
+          </script>
+</head>
+
+<body>
+          <div class="container">
+                    <h2>Student Registration</h2>
+                    <form name="form" onsubmit="return validateForm()">
+                              Name
+                              <input type="text" name="name">
+                              Email
+                              <input type="text" name="email">
+                              Phone
+                              <input type="text" name="phone">
+                              Password
+                              <input type="password">
+                              <button type="submit">Register</button>
+                    </form>
+          </div>
+</body>

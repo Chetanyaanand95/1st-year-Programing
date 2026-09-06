@@ -1,0 +1,19 @@
+<html>
+
+<head>
+          <script>
+                    let colors = ['#e74c3c', '#8e44ad', '#2980b9', '#27ae60', '#1abc9c'];
+                    let i = 0;
+                    function changeColor() {
+                              document.body.style.background = colors[i];
+                              i++;
+                              if (i == colors.length)
+                                        i = 0;
+                    }
+                    setInterval(changeColor, 2000); 
+          </script>
+</head>
+
+<body>
+          <h1>Background Color Changer</h1>
+</body>
